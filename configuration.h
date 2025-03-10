@@ -21,10 +21,14 @@ const char AIR_PRESSURE_TOPIC_NAME[] = "broker/weatherData/airPressureAtSealevel
 
 const int SENSOR_READOUT_TIMEOUT = 5;             //time in seconds, after which new measurements are collected (relative to DEVICE_HEARTBEAT_CYCLE_TIME);
 
-const bool ENABLE_WIFI_CONNECTIVITY = true;       //enable Wifi Connectivity (Note: Enabling this is required for using "MQTT data sharing" feature)
+const bool ENABLE_WIFI_CONNECTIVITY = true;
 const char *WIFI_SSID = "WIFI_SSID";
-const char *WIFI_PASSWORD = "SECURE_PASSWORD";
-const char *WIFI_HOSTNAME = "WeatherStation";     //EXAMPLE: WEATHER_STATION_#1 (must be unique on the network. Otherwise data sharing might be break on broker side)
+const char *WIFI_PASSWORD = "WIFI_PASSWORD";
+const char *WIFI_HOSTNAME = "WWATHER_STATION";  //EXAMPLE: WEATHER_STATION_#1
+const bool USE_STATIC_NETWORK_CONFIG = false;
+const IPAddress IP_ADDRESS(0, 0, 0, 0);         //only required if USE_STATIC_NETWORK_CONFIG is set to true
+const IPAddress GATEWAY(0, 0, 0, 0);            //only required if USE_STATIC_NETWORK_CONFIG is set to true
+const IPAddress SUBNET(0, 0, 0, 0);             //only required if USE_STATIC_NETWORK_CONFIG is set to true
 
 const int WIFI_CONNECTION_RETRY_TIMEOUT = 2;      //time in seconds (multiplied by DEVICE_HEARTBEAT_CYCLE_TIME) after which a wifi reconnect is tried (might be needed for slow networks)
 
