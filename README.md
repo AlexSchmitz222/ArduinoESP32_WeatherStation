@@ -6,4 +6,5 @@ An Arduino ESP32 based Weatherstation with
 - Support for BME280 aswell as BMP280
 
 # Important
-This repo is only for archival purposes. It is not actively maintained.
+This repo is for archival purposes only. 
+**It is not actively maintained.**
